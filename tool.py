@@ -175,7 +175,7 @@ def git_data_json():
     ----------
     需要安装git命令行工具，并且添加到环境变量中
     '''
-    os.system('cd ../clwy1002.github.io')
+    os.system('cd d:\blog\clwy1002.github.io')
     os.system('git checkout save')
     os.system('git add --all')
     os.system('git commit -m "add data_json"')
