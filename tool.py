@@ -163,13 +163,27 @@ def git_operation():
     ----------
     需要安装git命令行工具，并且添加到环境变量中
     '''
+    os.system('git checkout master')
     os.system('git add --all')
     os.system('git commit -m "add photos"')
     os.system('git push origin master')
 
+def git_data_json():
+    '''
+    git 命令行函数，将仓库提交
+    
+    ----------
+    需要安装git命令行工具，并且添加到环境变量中
+    '''
+    os.system('cd ../clwy1002.github.io')
+    os.system('git checkout save')
+    os.system('git add --all')
+    os.system('git commit -m "add data_json"')
+    os.system('git push origin_blog save')
 if __name__ == "__main__":
     cut_photo()        # 裁剪图片，裁剪成正方形，去中间部分
     compress_photo()   # 压缩图片，并保存到mini_photos文件夹下
-    git_operation()    # 提交到github仓库
+    git_operation()    # 提交图片到github仓库
     handle_photo()     # 将文件处理成json格式，存到博客仓库中
+    git_data_json()    # 提交data_json到github仓库（hexo）
     
